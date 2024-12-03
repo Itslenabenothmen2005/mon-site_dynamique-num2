@@ -1,0 +1,136 @@
+#TP8-body {
+  margin: 0px;
+  display: flex;
+  background-color:Khaki; 
+}
+
+#conteneur1,#conteneur2 {
+  margin: 0px;
+  padding:0px;
+  background-image: linear-gradient(to bottom, Khaki, lightgoldenrodyellow);
+}
+
+.fld1,.fld2 {
+  border-width: medium;
+  background-color: lightgoldenrodyellow;
+  border-radius: 20px;
+  color: orange;
+}
+
+.lgd {
+  font-family: verdana, arial, sans-serif;
+  font-size: 14pt;
+  font-weight: bold;
+  color: white;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  background-color: Chocolate;
+  border-radius: 10px;
+
+}
+
+.label {
+  display: inline-block;
+  width: 239px;
+  font-family: Candara;
+  font-size: 13pt;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  font-weight: bold;
+}
+
+.input {
+  display: inline-block;
+  width: 330px;
+  padding-top: 6px;
+  padding-right: 6px;
+  padding-bottom: 6px;
+  padding-left: 6px;
+}
+
+.champ {
+  outline-width: medium;
+  outline-style: none;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  border-top-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-top-color: #aaaaaa;
+  border-right-color: #aaaaaa;
+  border-bottom-color: #aaaaaa;
+  border-left-color: #aaaaaa;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  border-radius: 8px;
+  font-family: verdana, arial, sans-serif;
+  background-color: DarkSeaGreen;
+}
+
+input.champ[type="text"]:focus, input.champ[type="password"]:focus {
+  background-color: #eeeeee;
+}
+
+input.champ[type="submit"], input.champ[type="reset"] {
+  background-color: #ee6600;
+  color: white;
+  border-top-width: medium;
+  border-right-width: medium;
+  border-bottom-width: medium;
+  border-left-width: medium;
+  border-top-style: none;
+  border-right-style: none;
+  border-bottom-style: none;
+  border-left-style: none;
+  cursor: pointer;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  width: 160px;
+}
+
+#par:hover {
+}
+
+#par {
+  background-color: lightgoldenrodyellow;
+}
+
+h2 {
+  color: #003300;
+  background-color: Khaki;
+  width: 433px;
+}
+
+.ins {
+  color: blue;
+}
+
+article {
+  width: 50px;
+  background-color: Khaki;
+}
+
+
+fieldset.fddd {
+  width: 100px;
+}
+table{
+  border:1px; 
+  width:150px;
+  height: 600px;
+}

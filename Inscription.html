@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="Style_Inscription.css" />
+    <script type="text/javascript" src="Controle.js"></script>
+  </head>
+  <body id="TP8-body">
+    <nav>
+      <div id="conteneur1">
+        <form
+          name="F"
+          method="post"
+          action="valider1.php"
+          onsubmit="return Valider()"
+        >
+          <fieldset class="fld1">
+            <legend class="lgd">Inscription/Mise à jour</legend>
+            <h2 onmouseover="reglement()">S'inscrire ...</h2>
+            <div class="label">Choisir op :&nbsp;</div>
+            <div class="input">
+              <select type="text" name="op1" id="op1" class="champ">
+                <option>------</option>
+                <option value="1">Ajout</option>
+                <option value="2">Modification</option>
+              </select>
+            </div>
+            <br />
+            <div class="label">Code:</div>
+            <div class="input">
+              <input
+                name="C"
+                id="C"
+                class="champ"
+                maxlength="8"
+                placeholder="Code Stagiaire"
+                required=""
+                onfocus="colorer(this.id)"
+                type="text"
+              />
+            </div>
+            <br />
+            <div class="label">Nom et prénom</div>
+            <div class="input">
+              <input
+                name="NP"
+                id="NP"
+                class="champ"
+                maxlength="25"
+                placeholder="Entrer ton nom et prénom"
+                required=""
+                onfocus="colorer(this.id)"
+                onblur="convertir()"
+                type="text"
+              />
+            </div>
+            <br />
+            <div class="label">Téléphone</div>
+            <div class="input">
+              <input
+                name="Tel"
+                id="Tel"
+                class="champ"
+                maxlength="8"
+                placeholder="Entrer num téléphone"
+                required=""
+                type="tel"
+              />
+            </div>
+            <br />
+            <div class="label">Date de naissance</div>
+            <div class="input">
+              <input
+                name="dtn"
+                id="dtn"
+                class="champ"
+                value="2022-12-08"
+                type="Date"
+              />
+            </div>
+            <br />
+            <div class="label">Genre</div>
+            <div class="input">
+              <input
+                name="R"
+                id="Ho"
+                class="champ"
+                value="H"
+                type="radio"
+              />Homme
+              <input
+                name="R"
+                id="Fe"
+                class="champ"
+                value="F"
+                type="radio"
+              />Femme
+            </div>
+            <br />
+            <div class="label">
+              <p id="par"></p>
+            </div>
+            <br />
+            <div class="label">Email</div>
+            <div class="input">
+              <input
+                name="email"
+                id="email"
+                class="champ"
+                maxlength="20"
+                placeholder="Tapez l'email"
+                oninput="VotreEmail()"
+                required=""
+                type="email"
+              />
+            </div>
+            <br />
+            <div class="label">Mot de passe</div>
+            <div class="input">
+              <input
+                name="mdp"
+                id="Password"
+                class="champ"
+                maxlength="12"
+                placeholder="Mot de passe"
+                required=""
+                type="password"
+              />
+            </div>
+            <br />
+            <div class="label">Confirmer</div>
+            <div class="input">
+              <input
+                name="remdp"
+                id="RePassword"
+                class="champ"
+                maxlength="12"
+                placeholder="Confirmer Mdp"
+                required=""
+                type="password"
+              />
+            </div>
+            <br />
+            <div class="label">Niveau en programmation Web</div>
+            <div class="input">
+              <input
+                name="rn"
+                id="nivp"
+                min="1"
+                max="20"
+                step="1"
+                value="1"
+                class="champ"
+                onchange="NivProg()"
+                type="range"
+              /><span id="NvP" readonly="">1</span>
+            </div>
+            <br />
+            <div class="label">Nombre d'année d'experience</div>
+            <div class="input">
+              <input
+                name="aex"
+                id="exp"
+                min="0"
+                value="0"
+                max="10"
+                class="champ"
+                type="Number"
+              />
+            </div>
+            <br />
+            <div class="label">Choisir du thème de formation :&nbsp;</div>
+            <div class="input">
+              <select type="text" name="opt" id="lis" class="champ">
+                <option>------</option>
+                <option value="HTML">HTML</option>
+                <option value="CSS">CSS</option>
+                <option value="JS">JavaScript</option>
+                <option value="PHP">PHP</option>
+                <option value="SQL">Base de donnèes</option>
+              </select>
+            </div>
+            <br />
+            <div class="label">Hobbies</div>
+            <div class="input">
+              <input name="HO1" value="Lecture" type="checkbox" /> Lecture
+              <input name="HO2" value="Cinéma" type="checkbox" /> Cinema
+              <input name="HO3" value="Sport" type="checkbox" /> Sport
+            </div>
+            <br />
+            <div class="label">Couleur préférée</div>
+            <div class="input">
+              <input name="coul" id="coul" value="#000000" type="color" />
+            </div>
+            <br />
+            <div class="label"></div>
+            <div class="input">
+              <input
+                name="sinscrire"
+                value="Ins / M à jour "
+                class="champ"
+                type="submit"
+              />
+              <input
+                name="Annuler"
+                value="Annuler"
+                class="champ"
+                type="reset"
+              />
+            </div>
+            <br />
+          </fieldset>
+        </form>
+      </div>
+    </nav>
+    <article>
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <div id="conteneur2">
+                <form
+                  name="F2"
+                  method="post"
+                  action="Valider2.php"
+                  onsubmit="return Valider2()"
+                >
+                  <fieldset id="fddd" class="fld2">
+                    <legend class="lgd">Recherche/Suppression</legend>
+                    <div class="label">Choisir op :&nbsp;</div>
+                    <div class="input">
+                      <select type="text" name="op2" id="op2" class="champ">
+                        <option>------</option>
+                        <option value="3">Recherche</option>
+                        <option value="4">Suppression</option>
+                      </select>
+                    </div>
+                    <br />
+                    <div class="label">Code:</div>
+                    <div class="input">
+                      <input
+                        name="C2"
+                        id="C2"
+                        class="champ"
+                        maxlength="8"
+                        placeholder="Code Stagiaire"
+                        required=""
+                        onfocus="colorer(this.id)"
+                        type="text"
+                      />
+                    </div>
+                    <br />
+                    <br />
+                    <div class="label"></div>
+                    <div class="input">
+                      <input
+                        name="sinscrire"
+                        value="Rech / Supp"
+                        class="champ"
+                        type="submit"
+                      />
+                      <input
+                        name="Annuler"
+                        value="Annuler"
+                        class="champ"
+                        type="reset"
+                      />
+                    </div>
+                  </fieldset>
+                </form>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+  </body>
+</html>
